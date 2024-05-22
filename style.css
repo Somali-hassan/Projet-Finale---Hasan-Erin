@@ -1,55 +1,172 @@
 * {
   margin: 0;
   box-sizing: border-box;
-}  
-body{
-  font-family:Arial, Helvetica, sans-serif;
-  color:#432d2b;
-  font-weight: bold;
 }
-#main-bordure{
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #3c2220;
+  font-weight: bold;
+  font-size: 0.5cm;
+}
+
+#main-bordure {
   margin-left: auto;
   margin-right: auto;
   background-color: rgb(255, 255, 255);
 }
-header{
+
+header {
   display: flex;
   flex-direction: row;
   align-items: center;
   background-color: rgb(202, 19, 43);
-  padding:10px;
-  color:white;
-}
-header div{
-  margin-right: 1cqmax;
-}
-.main-footer{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
- 
+  padding: 10px;
+  color: white;
 }
 
-#BtnPlus{
+header div {
+  margin-right: 1cqmax;
+}
+
+.first-footer{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+}
+
+.first-footer h1 {
+  font-size: small;
+  padding: 3px;
+}
+
+.first-footer span {
+  font-size: small;
+  color: red;
+}
+
+.Second-footer{
+  margin-top: 4em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  font-size: small;
+  padding: 3px;
+  
+}
+hr{
+ 
+}
+#first-line h1{
+  font-size: small;
+  padding: 3px;
+}
+#second-line h1{
+  font-size: small;
+  padding: 3px;
+}
+#third-line h1{
+  font-size: small;
+  padding: 3px;
+}
+
+
+
+
+#BtnPlus {
   display: flex;
   flex-direction: column;
   border: none;
   background: none;
-  color:white;
+  color: white;
   font-weight: bold;
 }
-#header-gauche{
+
+#header-gauche {
   display: flex;
   justify-content: flex-end;
 }
-#main{
-  
+
+#main {
   display: flex;
-  
   align-items: center;
-  justify-content:center;
+  justify-content: center;
   margin: 2cm;
+  padding-right: 4cm;
+  padding-left: 4cm;
+
 }
-#IMG-Pizza{
-  width:12cm;
+
+#IMG-Pizza {
+  width: 12cm;
+}
+
+#main h1 {
+  font-size: 1.4cm;
+  padding-bottom: 1cm;
+}
+
+#main div {
+  padding-right: 1cm;
+}
+
+#btnCommande {
+  border-radius: 25px;
+  background-color: rgb(202, 19, 43);
+  color: white;
+  font-weight: bold;
+  font-size: 0.5cm;
+  border-style: none;
+  padding: 15px;
+  margin-top: 1cm;
+}
+
+.Produits {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 15cm;
+  margin-left: 3.5cm;
+  line-height: 32px;
+}
+
+.Affiches {
+  margin-left: 1cm;
+
+}
+
+.ImgAffiche {
+  width: 15cm;
+  border-radius: 15px 15px 0px 0px;
+}
+
+#fig2 {
+  border-radius: 15px;
+  background-color: #18213e;
+  color: white;
+  font-size: small;
+}
+#fig2 button{
+  background-color: rgb(202, 19, 43);
+  color: white;
+}
+.fig1 {
+  font-weight: normal;
+  font-size: small;
+  border-radius: 15px;
+}
+
+.textAffiche {
+  display: flex;
+  flex-direction: column;
+}
+.textAffiche h1{
+  font-size: medium;
+}
+.btnAfficher{
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 0.5cm;
+  border-color:rgb(202, 19, 43);
+  color:rgb(202, 19, 43);
+  padding: 15px;
+  margin-top: 1cm;
 }
