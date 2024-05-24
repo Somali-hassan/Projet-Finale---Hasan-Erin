@@ -124,9 +124,9 @@ header div {
     width: 0.7cm;
   margin-left: 0.5em;
 }
-#third-line img:hover{
+
   
-}
+
 /* Div et Image top */
 #main {
   display: flex;
@@ -173,7 +173,7 @@ header div {
 
 .Affiches {
   margin-left: 1cm;
-
+  display: inline-flex;
 }
 .ImgAffiche {
   width: 15cm;
@@ -194,24 +194,27 @@ header div {
   font-weight: normal;
   font-size: small;
   border-radius: 15px;
+  display:flex;
+  flex-direction: row;
 }
 
 .textAffiche {
   display: flex;
   flex-direction: column;
+  padding-right:6cm;
+  padding-left: 1cm;
+  line-height: 20px;
 }
 .textAffiche h1{
   font-size: medium;
 }
 .btnAfficher{
+  float: right;
   border-radius: 25px;
   font-weight: bold;
   font-size: 0.5cm;
   border-color:rgb(202, 19, 43);
   color:rgb(202, 19, 43);
   padding: 15px;
-  margin-top: 1cm;
-}
-.btnAfficher{
-  float: right;
+  position:relative;
 }

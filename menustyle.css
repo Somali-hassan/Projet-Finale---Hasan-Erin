@@ -3,6 +3,11 @@
   margin: 0;
   box-sizing: border-box;
 }
+#title {
+  margin-top: 1em;
+  margin-right: 4em;
+  text-align: center;
+}
 
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -15,6 +20,7 @@ body {
   margin-right: auto;
   background-color: rgb(255, 255, 255);
 }
+
 
 header {
   display: flex;
@@ -72,4 +78,80 @@ header div {
 
 #header-gauche {
   margin-left:9cm;
+}
+
+#first-texte{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  font-size: x-small;
+  margin-left: 1.3cm;
+}
+#second-texte{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  font-size: x-small;
+  margin-left: 1.3cm;
+}
+
+#third-texte{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  font-size: x-small;
+  margin-left: 1.3cm;
+}
+
+/* Footer */
+footer{
+  margin-top: 5em;
+  background-color: 	#E5E4E2;
+}
+.first-footer{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+}
+
+.first-footer h1 {
+  font-size: small;
+  padding: 3px;
+}
+
+.first-footer span {
+  font-size: small;
+  color: red;
+}
+.first-footer span:hover {
+  text-decoration: underline;
+}
+.Second-footer{
+  margin-top: 4em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  font-size: small;
+  padding: 3px;
+
+}
+
+#first-lines h1{
+  font-size: small;
+  padding: 3px;
+}
+#first-lines h1:hover {
+    text-decoration: underline;
+}
+#second-lines h1{
+  font-size: small;
+  padding: 3px;
+}
+#second-lines h1:hover {
+    text-decoration: underline;
+}
+#third-lines h1{
+  font-size: small;
+  padding: 3px;
+}
+#third-lines img{
+    height: 0.7cm;
+    width: 0.7cm;
+  margin-left: 0.5em;
 }

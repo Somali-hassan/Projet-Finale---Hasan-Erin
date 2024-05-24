@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tim Login</title>
+  <link rel="stylesheet" href="connexion.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</head>
+<body>
+  <div id = "main-bordure">
+  <img id="Loginpic" src="Resources/IMG/TimHortonsLogin.PNG" alt="">
+  <div id="Login">
+    <img id ="Logoimg" src="Resources/IMG/TimHLogo.PNG" alt="">
+    <div class = "Milieu" id = "Login-form">
+    <div>
+      <button id = "btnInscription">Inscription</button>
+      <button id = "btnConnexion">Connexion</button>
+    </div>
+      <!-- Display Inscription -->
+    <div class = "Milieu" id = "Inscription">
+    <div id = "Inscription-Inputs">
+      <input id ="Prénom" type="text" placeholder="Prénom *">
+      <input id = "email" type="email" placeholder="Adresse électronique *">
+    </div>
+      <button id = btnDateN>Informations facultatives <span class="material-icons">arrow_drop_down </span></button>
+      <div id = "Date-Input">
+        <input id = "dateA" type="number" placeholder="Année">
+        <input id = "dateM" type="number" placeholder="Mois">
+        <input id = "dateJ" type="number" placeholder="Jour">
+      </div>
+      <div id = "Check-Inputs">
+        <input type="checkbox">
+        <p>Je souhaite recevoir par courriel des informations et des offres spéciales de Tim Hortons</p>
+        <input type="checkbox">
+        <p>J'accepte la:
+        politique de confidentialité <a href ="">(FR | EN)</a><br>
+        Modalites et Conditions FideliTim <a href ="">(FR | EN)</a><br>
+        conditions d’utilisation <a href ="">(FR | EN)</a></p><br>
+      </div>
+      <button id = "btnCompte">Créer un compte</button>
+    </div>
+      <!-- Display Connexion -->
+    <div id = "Connexion">
+      <input id = "email" type="email" placeholder="Adresse électronique *">
+      <button id = "btnConnecter">Créer un compte</button>
+    </div>
+  </div>
+  </div>
+  </div>
+  <script src = "connexion.js"></script>
+</body>
+</html>

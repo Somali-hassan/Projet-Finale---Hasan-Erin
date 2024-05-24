@@ -1,5 +1,6 @@
 let itemList = document.querySelector('.Produits')
 const btnCommande = document.getElementById("btnCommande")
+const btnConnecte = document.getElementById("btnConnecte")
 let items = [
   {
       index: 0,
@@ -25,7 +26,7 @@ let items = [
         title: "Essayez le cappuccino glacé OREO DOUBLE CRÈME® et le cappuccino glacé CARAMILK®!",
               paragraphe: "En l’honneur du 25ᵉ anniversaire de notre emblématique cappuccino glacé, nous ajoutons le tout nouveau cappuccino glacé CARAMILK® au menu et ramenons le cappuccino glacé OREO DOUBLE CRÈME®! Ne manquez pas votre chance; il s’agit d’une offre de durée limitée.",
               lien: "*Des conditions s’appliquent.",
-              Bouton: "Essayer maintenant",
+              Bouton: "Commander",
               choix:"fig1"
       },
     {
@@ -34,7 +35,7 @@ let items = [
         title: "Les pizzas sur pain plat sont arrivées!",
               paragraphe: "Laissez vos papilles choisir votre prochain coup de cœur. Choisissez parmi nos quatre délicieuses variétés, soit poulet parmesan, bacon plein-goût, pepperoni, et simplement fromage – elles sont servies chaudes, fraîchement sorties du four!",
               lien: "*Des modalités s’appliquent.",
-              Bouton: "Commander",
+              Bouton: "Participez dès maintenant",
               choix:"fig1"
       },
     {
@@ -43,7 +44,7 @@ let items = [
         title: "60 ans de Tim, ça se fête!",
               paragraphe: "Achetez un produit de café Tim à la maison et courez la chance de GAGNER du café gratuit* pendant un an dans les restaurants Tim Hortons!",
               lien: "*Des conditions s’appliquent.",
-              Bouton: "Participez dès maintenant",
+              Bouton: "En savoir plus",
               choix:"fig1"
       },
     {
@@ -52,7 +53,7 @@ let items = [
         title: "Démarrez bien avec 5 000 points en plus!",
               paragraphe: "a Carte de crédit Tim, c’est 2 000 pts sur votre 1er achat au mois 1, et 1 000 pts de plus chaque mois où vous dépensez 200 $+ dans les 3 mois suivants¹!",
               lien: "Des conditions s’appliquent.",
-              Bouton: "En savoir plus",
+              Bouton: "Postuler",
               choix:"fig1"
       },
     {
@@ -61,7 +62,7 @@ let items = [
         title: "Fais partie d’une équipe",
               paragraphe: "Joins-toi à ton Tim local et fais partie d’une équipe extraordinaire au service des gens d’ici depuis 60 ans!",
               lien: "*Des modalités s’appliquent.",
-              Bouton: "Postuler",
+              Bouton: "Historique",
               choix:"fig1"
       },
 ]
@@ -79,15 +80,18 @@ function initItem() {
                         <h1>${value.title}</h1>
                         <p>${value.paragraphe}</p>
                         <a href = "">${value.lien}</a>
-                            </div>
-                        <button class = "btnAfficher">${value.Bouton}</button>
+                    </div>
+                    <button class = "btnAfficher">${value.Bouton}</button>
                     </figcaption>
-                </figure>
-            </div>`;
+            </figure>
+        </div>`;
         itemList.appendChild(card);
     }
 }
 initItem();
 btnCommande.addEventListener("click", function change(){
     window.location.href = "menu.html";
+})
+btnConnecte.addEventListener("click", function change(){
+    window.location.href = "connexion.html";
 })
