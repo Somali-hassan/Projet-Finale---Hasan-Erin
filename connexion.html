@@ -14,13 +14,14 @@
   <div id="Login">
     <img id ="Logoimg" src="Resources/IMG/TimHLogo.PNG" alt="">
     <div class = "Milieu" id = "Login-form">
+      <!-- Boutons pour display -->
     <div>
-      <button id = "btnInscription">Inscription</button>
-      <button id = "btnConnexion">Connexion</button>
+      <button id = "btnInscription" class = "btnswitch">Inscription</button>
+      <button id = "btnConnexion" class = "btnswitch">Connexion</button>
     </div>
       <!-- Display Inscription -->
     <div class = "Milieu" id = "Inscription">
-    <div id = "Inscription-Inputs">
+    <div id = "Inscription-Inputs" class = "Milieu">
       <input id ="Prénom" type="text" placeholder="Prénom *">
       <input id = "email" type="email" placeholder="Adresse électronique *">
     </div>
@@ -39,13 +40,16 @@
         Modalites et Conditions FideliTim <a href ="">(FR | EN)</a><br>
         conditions d’utilisation <a href ="">(FR | EN)</a></p><br>
       </div>
-      <button id = "btnCompte">Créer un compte</button>
+      <button id = "btnCompte" class = "Milieu">Créer un compte</button>
     </div>
       <!-- Display Connexion -->
-    <div id = "Connexion">
-      <input id = "email" type="email" placeholder="Adresse électronique *">
-      <button id = "btnConnecter">Créer un compte</button>
+    <div id = "Connexion" class = "Milieu">
+      <form id="login-form">
+        <input type="text" name="username" id="email" class="login" placeholder="Adresse Courielle">
+      </form>
+      <button id = "btnConnecter" class = "Milieu">Connecter</button>
     </div>
+      <!-- fin display -->
   </div>
   </div>
   </div>

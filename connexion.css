@@ -1,8 +1,9 @@
 body{
-    color:#3c2220;
+    color:rgb(63, 32, 33);
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 500;
     font-size: 0.5cm;
+    background-color: rgb(249, 245, 238);
 }
 #loginpic{
     width: 100%;
@@ -19,15 +20,29 @@ body{
 }
 
 #main-bordure{
-    display: flex;
-    flex-direction: row;
+      display: flex;
 }
 #Login{
+    align-self: center;
     display: flex;
     flex-direction: column;
+    justify-items: center;
     align-items: center;
-    justify-content: center;
-    float: center;
+    margin: auto;
+}
+#Login-form{
+    background-color: white;
+    width:10cm;
+    border-radius: 50px;
+}
+.btnswitch{
+    font-size: 0.5cm;
+    border-style:none none solid none;
+    background-color: white;
+    color:rgb(63, 32, 33);
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 1cm;
+    width:4.9cm;
 }
 #Logoimg{
     height:3cm;
@@ -38,4 +53,8 @@ body{
     align-items: center;
     justify-content: center;
     float: center;
+    margin:auto;
+}
+#Inscription{
+    display: none;
 }
