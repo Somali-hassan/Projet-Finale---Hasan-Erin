@@ -5,6 +5,8 @@ let btnSwitchI = document.getElementById("btnInscription");
 let btnSwitchC = document.getElementById("btnConnexion");
 let displayI = document.getElementById("Inscription");
 let displayC = document.getElementById("Connexion");
+let nom = document.getElementById("Prénom");
+let email = document.getElementById("email");
 let listLogin = [];
 // Switch displays
 btnSwitchI.addEventListener("click", () =>{
@@ -20,10 +22,7 @@ btnSwitchC.addEventListener("click",() =>{
     btnSwitchI.style.borderColor = "#e0d7d7";
 })
 // Inscription
-btnI.addEventListener("click", () => {
-    // e.preventDefault();
-    
-})
+btnI.addEventListener("click", Compte)
 // Connexion
 btnC.addEventListener("click", login)
 // Vérifier si user est valide
@@ -31,11 +30,29 @@ function login(e){
     e.preventDefault(); 
     listLogin = JSON.parse(localStorage.getItem('listLogin'));
     const username = loginform.username.value;
-    if (username == "user") {
-        
+    if(listLogin != null){
+        if (listLogin.includes(username)) {
+            window.location.href = "index.html";
+        } else {
+             alert("Compte invalide. Inscrire ou vous connecter");         
+        }
+    }
+    else{
+        alert("Compte invalide. Inscrire ou vous connecter.");
+    }
+    
+}
+function Compte() {
+    listStorage = JSON.parse(localStorage.getItem('listLogin'));
+    // let card = {prenom:nom.value, mail: email.value};
+    let card = email.value;
+    if (!listLogin.includes(card)){
+        listLogin.push(card);
+        localStorage.setItem('listLogin', JSON.stringify(listLogin));
         window.location.href = "index.html";
-        // Allez au page principale
-    } else {
-         alert("Invalide username.");
+    }
+    else{
+        // Doit faire compris listeLogin hors page connexion
+        alert("Compte déjà existant");
     }
 }

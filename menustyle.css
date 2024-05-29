@@ -106,12 +106,14 @@ footer{
   background-color: 	#E5E4E2;
 }
 .first-footer{
+ 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 
 }
 
 .first-footer h1 {
+  margin-top: 2em;
   font-size: small;
   padding: 3px;
 }
