@@ -22,8 +22,10 @@
       <!-- Display Inscription -->
     <div class = "Milieu" id = "Inscription">
     <div id = "Inscription-Inputs" class = "Milieu">
-      <input id ="Prénom" type="text" placeholder="Prénom *">
-      <input id = "email" type="email" placeholder="Adresse électronique *">
+      <input id ="Prénom" type="text">
+      <label class = "animelabel" id = "Prénom-label" for="Prénom">Prénom *</label>
+      <input id = "email" type="email"> 
+      <TextField id="outlined-search" label="Outlined" variant="outlined" />
     </div>
       <button id = btnDateN>Informations facultatives <span class="material-icons">arrow_drop_down </span></button>
       <div id = "Date-Input">
@@ -34,7 +36,7 @@
       <div id = "Check-Inputs">
         <input type="checkbox">
         <p>Je souhaite recevoir par courriel des informations et des offres spéciales de Tim Hortons</p>
-        <input type="checkbox">
+        <input type="checkbox" id = "checkrequis">
         <p>J'accepte la:
         politique de confidentialité <a href ="">(FR | EN)</a><br>
         Modalites et Conditions FideliTim <a href ="">(FR | EN)</a><br>

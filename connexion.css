@@ -1,3 +1,5 @@
+
+
 body{
     color:rgb(63, 32, 33);
     font-family: Arial, Helvetica, sans-serif;
@@ -18,7 +20,20 @@ body{
     filter: blur(8px);
     float: left;
 }
+/* .animelabel{
+    cursor: default;
+    position: absolute;
+      top: 0;
+      left: 0;
+}
 
+@keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}*/
 #main-bordure{
       display: flex;
 }
@@ -57,15 +72,41 @@ body{
 }
 #Inscription{
     display: none;
+    padding:1em;
 }
-input{
+#Connexion{
+    padding:1em;
+}
+#Inscription-Inputs input{
+    position:relative;
     padding:16px;
+    width: 7cm;
+    margin-top:1em;
+    border-radius: 4px;
+    font-size: large;
+    color:rgb(63, 32, 33);
+    font-family: Arial, Helvetica, sans-serif;
+}
+#Date-Input input{
+    padding:16px;
+    width: 2cm;
     margin-top:1em;
     outline: none;
-    box-shadow: none;
-    border-width: initial;
-    border-style:solid;
-    border-color:#c7c1bc;
-    border-image: initial;
     border-radius: 4px;
+    font-size: large;
+    color:rgb(63, 32, 33);
+    font-family: Arial, Helvetica, sans-serif;
+}
+#Date-Input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: center;
+    margin:auto;
+}
+inputs{
+    border-style:solid;
+    border-width:1px;
+    border-color:#c7c1bc;
+    box-shadow: none;
 }

@@ -49,6 +49,7 @@ function Compte() {
     if (!listLogin.includes(card)){
         listLogin.push(card);
         localStorage.setItem('listLogin', JSON.stringify(listLogin));
+        alert("Compte créé avec succès.")
         window.location.href = "index.html";
     }
     else{
