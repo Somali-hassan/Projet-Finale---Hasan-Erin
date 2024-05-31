@@ -21,35 +21,43 @@
     </div>
       <!-- Display Inscription -->
     <div class = "Milieu" id = "Inscription">
-    <div id = "Inscription-Inputs" class = "Milieu">
-      <input id ="Prénom" type="text">
-      <label class = "animelabel" id = "Prénom-label" for="Prénom">Prénom *</label>
-      <input id = "email" type="email"> 
-      <TextField id="outlined-search" label="Outlined" variant="outlined" />
-    </div>
-      <button id = btnDateN>Informations facultatives <span class="material-icons">arrow_drop_down </span></button>
-      <div id = "Date-Input">
-        <input id = "dateA" type="number" placeholder="Année">
-        <input id = "dateM" type="number" placeholder="Mois">
-        <input id = "dateJ" type="number" placeholder="Jour">
+        <div class = "form">
+            <input type="text" id="prénom" class="form__input" autocomplete="off" placeholder="">
+            <label id = "nom" for="prénom" class="form__label">Prénom *</label>
+            <input type="text" id="email" class="form__input" autocomplete="off" placeholder="">
+            <label id = "mail" for="email" class="form__label">Adresse courriel *</label>
+          </div>
+      <button id = btnDateN>Informations facultatives <span class="material-icons">keyboard_arrow_down </span></button>
+      <div id = "Date-Input" class = "form">
+        <input id = "dateA" type="number" class="form__inputDate" autocomplete="off" placeholder="">
+        <label id = "DatA" for="dateA" class="form__label">Année</label>
+        <input id = "dateM" type="number" class="form__inputDate" autocomplete="off" placeholder="">
+        <label id = "DatM" for="dateM" class="form__label">Mois</label>
+        <input id = "dateJ" type="number" class="form__inputDate" autocomplete="off" placeholder="">
+        <label id = "DatJ" for="dateJ" class="form__label">Jour</label>
       </div>
       <div id = "Check-Inputs">
-        <input type="checkbox">
-        <p>Je souhaite recevoir par courriel des informations et des offres spéciales de Tim Hortons</p>
-        <input type="checkbox" id = "checkrequis">
-        <p>J'accepte la:
+        <div>
+            <input type="checkbox">
+            <p>Je souhaite recevoir par courriel des informations et des offres spéciales de Tim Hortons</p>
+        </div>
+        <div>
+            <input type="checkbox" id = "checkrequis">
+            <p>J'accepte la:
         politique de confidentialité <a href ="">(FR | EN)</a><br>
         Modalites et Conditions FideliTim <a href ="">(FR | EN)</a><br>
         conditions d’utilisation <a href ="">(FR | EN)</a></p><br>
+        </div>
       </div>
       <button id = "btnCompte" class = "Milieu">Créer un compte</button>
     </div>
       <!-- Display Connexion -->
     <div id = "Connexion" class = "Milieu">
-      <form id="login-form">
-        <input type="text" name="username" id="email" class="login" placeholder="Adresse Courielle">
+      <form id="login-form" class = "form">
+        <input type="text" id="Cemail" class="form__input" autocomplete="on" placeholder="">
+            <label for="Cemail" class="form__label">Adresse courriel *</label>
       </form>
-      <button id = "btnConnecter" class = "Milieu">Connecter</button>
+      <button id = "btnConnecter" class = "Milieu">Connexion</button>
     </div>
       <!-- fin display -->
   </div>

@@ -5,7 +5,9 @@ let btnSwitchI = document.getElementById("btnInscription");
 let btnSwitchC = document.getElementById("btnConnexion");
 let displayI = document.getElementById("Inscription");
 let displayC = document.getElementById("Connexion");
-let nom = document.getElementById("Prénom");
+let btndisplayDate = document.getElementById("btnDateN");
+const checkr = document.querySelector("checkrequis");
+let nom = document.getElementById("prénom");
 let email = document.getElementById("email");
 let listLogin = [];
 // Switch displays
@@ -25,32 +27,37 @@ btnSwitchC.addEventListener("click",() =>{
 btnI.addEventListener("click", Compte)
 // Connexion
 btnC.addEventListener("click", login)
+// Display dates
+btndisplayDate.addEventListener("click", () =>{
+    document.getElementById("Date-Input").style.display = "block";
+    btndisplayDate.style.display = "none";
+})
 // Vérifier si user est valide
 function login(e){
-    e.preventDefault(); 
+    e.preventDefault();
     listLogin = JSON.parse(localStorage.getItem('listLogin'));
     const username = loginform.username.value;
     if(listLogin != null){
         if (listLogin.includes(username)) {
             window.location.href = "index.html";
         } else {
-             alert("Compte invalide. Inscrire ou vous connecter");         
+             alert("Compte invalide. Inscrire ou vous connecter");        
         }
     }
     else{
         alert("Compte invalide. Inscrire ou vous connecter.");
     }
-    
+
 }
 function Compte() {
     listStorage = JSON.parse(localStorage.getItem('listLogin'));
     // let card = {prenom:nom.value, mail: email.value};
-    let card = email.value;
+    let card = {nom.value, email.value;
     if (!listLogin.includes(card)){
         listLogin.push(card);
         localStorage.setItem('listLogin', JSON.stringify(listLogin));
         alert("Compte créé avec succès.")
-        window.location.href = "index.html";
+        window.location.href = "index.html";       
     }
     else{
         // Doit faire compris listeLogin hors page connexion

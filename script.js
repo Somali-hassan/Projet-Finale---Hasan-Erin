@@ -95,3 +95,5 @@ btnCommande.addEventListener("click", function change(){
 btnConnecte.addEventListener("click", function change(){
     window.location.href = "connexion.html";
 })
+let listL = JSON.parse(localStorage.getItem('listLogin'));
+alert("Bienvenue sur le site de Tim Hortons" + listL[0]);

@@ -70,8 +70,11 @@ header div {
   font-weight: bold;
 }
 
-#header-gauche {
+#header-gauche, #header-gaucheC {
   margin-left:9cm;
+}
+#header-gaucheC{
+   display:none;
 }
 /* Footer */
 .first-footer{
