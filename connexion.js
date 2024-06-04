@@ -10,6 +10,7 @@ const checkr = document.querySelector("checkrequis");
 let nom = document.getElementById("prénom");
 let email = document.getElementById("email");
 let listLogin = [];
+let Auth = [];
 // Switch displays
 btnSwitchI.addEventListener("click", () =>{
     displayC.style.display = "none";
@@ -39,9 +40,11 @@ function login(e){
     const username = loginform.username.value;
     if(listLogin != null){
         if (listLogin.includes(username)) {
+            alert("Vous êtes connecter");         
+            localStorage.setItem('Auth', JSON.stringify(username));
             window.location.href = "index.html";
         } else {
-             alert("Compte invalide. Inscrire ou vous connecter");        
+             alert("Compte invalide.");        
         }
     }
     else{
@@ -49,18 +52,44 @@ function login(e){
     }
 
 }
+// Install @supabase/supabase-js
+// import { createClient } from '@supabase/supabase-js';
+// // Connect to Supabase
+// const supabaseUrl = 'your-supabase-url';
+// const supabaseKey = 'your-supabase-key';
+// const supabase = createClient(supabaseUrl, supabaseKey);
+
+// // Store listLogin in Supabase
+// async function storeLogins(logins) {
+//   try {
+//     const { data, error } = await supabase
+//       .from('users')
+//       .insert(logins.map(login => ({ username: login })));
+//     if (error) {
+//       console.error('Error storing logins in Supabase:', error);
+//     } else {
+//       console.log('Logins stored in Supabase:', data);
+//     }
+//   } catch (error) {
+//     console.error('Error connecting to Supabase:', error);
+//   }
+// }
+
+// Update Compte function to store logins in Supabase
 function Compte() {
-    listStorage = JSON.parse(localStorage.getItem('listLogin'));
-    // let card = {prenom:nom.value, mail: email.value};
-    let card = {nom.value, email.value;
-    if (!listLogin.includes(card)){
-        listLogin.push(card);
-        localStorage.setItem('listLogin', JSON.stringify(listLogin));
-        alert("Compte créé avec succès.")
-        window.location.href = "index.html";       
-    }
-    else{
-        // Doit faire compris listeLogin hors page connexion
-        alert("Compte déjà existant");
-    }
+  listStorage = JSON.parse(localStorage.getItem('listLogin'));
+  let card = {mail : email.value,
+             nom : nom.value};
+  if (!listLogin.includes(card.mail)){
+    listLogin.push(card.mail);
+    // Store logins in Supabase
+    // storeLogins(listLogin);
+    localStorage.setItem('listLogin', JSON.stringify(listLogin));
+    alert("Compte créé avec succès.");
+    localStorage.setItem('Auth', JSON.stringify(card));
+    window.location.href = "index.html";      
+  }
+  else{
+    alert("Compte déjà existant");
+  }
 }

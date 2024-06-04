@@ -1,6 +1,7 @@
 let itemList = document.querySelector('.Produits')
 const btnCommande = document.getElementById("btnCommande")
 const btnConnecte = document.getElementById("btnConnecte")
+const btnPanier = document.getElementById("Panier")
 let items = [
   {
       index: 0,
@@ -96,4 +97,9 @@ btnConnecte.addEventListener("click", function change(){
     window.location.href = "connexion.html";
 })
 let listL = JSON.parse(localStorage.getItem('listLogin'));
-alert("Bienvenue sur le site de Tim Hortons" + listL[0]);
+let Auth = JSON.parse(localStorage.getItem('Auth'));
+alert("Bienvenue sur le site de Tim Hortons " + Auth.nom);
+
+btnPanier.addEventListener('click', () =>{
+    window.location.href = "panier.html";
+})

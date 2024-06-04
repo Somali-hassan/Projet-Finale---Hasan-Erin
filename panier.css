@@ -1,12 +1,6 @@
-/* Header */
 * {
   margin: 0;
   box-sizing: border-box;
-}
-#title {
-  margin-top: 1em;
-  margin-right: 4em;
-  text-align: center;
 }
 
 body {
@@ -15,12 +9,12 @@ body {
   font-weight: 500;
   font-size: 0.5cm;
 }
+
 #main-bordure {
   margin-left: auto;
   margin-right: auto;
   background-color: rgb(249, 245, 238);
 }
-
 
 header {
   display: flex;
@@ -76,44 +70,20 @@ header div {
   font-weight: bold;
 }
 
-#header-gauche {
+#header-gauche, #header-gaucheC {
   margin-left:9cm;
 }
-
-#first-texte{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  font-size: x-small;
-  margin-left: 1.3cm;
+#header-gaucheC{
+   display:none;
 }
-#second-texte{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  font-size: x-small;
-  margin-left: 1.3cm;
-}
-
-#third-texte{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  font-size: x-small;
-  margin-left: 1.3cm;
-}
-
 /* Footer */
-footer{
-  margin-top: 5em;
-  background-color: 	#E5E4E2;
-}
 .first-footer{
- 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 
 }
 
 .first-footer h1 {
-  margin-top: 2em;
   font-size: small;
   padding: 3px;
 }
@@ -134,72 +104,26 @@ footer{
 
 }
 
-#first-lines h1{
+#first-line h1{
   font-size: small;
   padding: 3px;
 }
-#first-lines h1:hover {
+#first-line h1:hover {
     text-decoration: underline;
 }
-#second-lines h1{
+#second-line h1{
   font-size: small;
   padding: 3px;
 }
-#second-lines h1:hover {
+#second-line h1:hover {
     text-decoration: underline;
 }
-#third-lines h1{
+#third-line h1{
   font-size: small;
   padding: 3px;
 }
-#third-lines img{
+#third-line img{
     height: 0.7cm;
     width: 0.7cm;
   margin-left: 0.5em;
 }
-/* Order lemonade */
-.limmain{
-  align-self: center;
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  align-items: center;
-  margin: auto;
-  font-size: small;
-}
-.format {
-  display: flex;
-  flex-direction: row;
-  margin-left: -24em;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding: 10px;
- 
-}
-.tasse {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding: 10px;
-  margin-left: -24em;
-}
-.quantité{
-  display: flex;
-  flex-direction: row;
-  margin-left: 42em;
-  width: 100%;
-  padding: 10px;
-}
-#BtnAjouter{
-  border-radius: 25px;
-  background-color: rgb(255, 255, 255);
-  color: rgb(202, 19, 43);
-  font-weight: bold;
-  font-size: small;
-  border-style: none;
-  padding: 10px;
-}
-
