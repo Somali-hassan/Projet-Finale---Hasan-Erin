@@ -39,9 +39,9 @@ function login(e){
     listLogin = JSON.parse(localStorage.getItem('listLogin'));
     const username = loginform.username.value;
     if(listLogin != null){
-        if (listLogin.includes(username)) {
-            alert("Vous êtes connecter");         
-            localStorage.setItem('Auth', JSON.stringify(username));
+        if (listLogin.find(item => item.mail === username)) {
+            alert("Vous êtes connecter");
+            localStorage.setItem('Auth', JSON.stringify(listLogin[listLogin.findIndex(item => item.mail === username)]));
             window.location.href = "index.html";
         } else {
              alert("Compte invalide.");        
@@ -51,6 +51,24 @@ function login(e){
         alert("Compte invalide. Inscrire ou vous connecter.");
     }
 
+}
+// Update Compte function to store logins in Supabase
+function Compte() {
+  listStorage = JSON.parse(localStorage.getItem('listLogin'));
+  let card = {mail : email.value,
+             nom : nom.value};
+  if (!listLogin.includes(card)){
+    listLogin.push(card);
+    // Store logins in Supabase
+    // storeLogins(listLogin);
+    localStorage.setItem('listLogin', JSON.stringify(listLogin));
+    alert("Compte créé avec succès.");
+    localStorage.setItem('Auth', JSON.stringify(card));
+    window.location.href = "index.html";      
+  }
+  else{
+    alert("Compte déjà existant");
+  }
 }
 // Install @supabase/supabase-js
 // import { createClient } from '@supabase/supabase-js';
@@ -75,21 +93,4 @@ function login(e){
 //   }
 // }
 
-// Update Compte function to store logins in Supabase
-function Compte() {
-  listStorage = JSON.parse(localStorage.getItem('listLogin'));
-  let card = {mail : email.value,
-             nom : nom.value};
-  if (!listLogin.includes(card.mail)){
-    listLogin.push(card.mail);
-    // Store logins in Supabase
-    // storeLogins(listLogin);
-    localStorage.setItem('listLogin', JSON.stringify(listLogin));
-    alert("Compte créé avec succès.");
-    localStorage.setItem('Auth', JSON.stringify(card));
-    window.location.href = "index.html";      
-  }
-  else{
-    alert("Compte déjà existant");
-  }
-}
+

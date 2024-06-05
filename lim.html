@@ -22,52 +22,46 @@
 
         <div id="header-gauche">
             <button id="btnConnecte">Connexion</button>
-            <button id="Panier" class="material-icons">
-                shopping_basket</button>
+            <button id="montrer" class="material-icons">
+                shopping_basket <span id="total"></span> </button>
         </div>
 
     </header>
 
 
     <button id="BtnMenu">Menu</button>
-
-
-    <div class="limmain">
-        <img src="Resources/IMG/PEV1.png" alt="">
-        <h1>Limonade givrée à la mangue</h1>
-        <h2 id="prix"> 3,29 $ • 300 Cal</h2>
-
-        <div class="format">
-            <br>
-            <h1>Format </h1>
-            <h2 id="size"> Moyen</h2>
-
-
+<div class="body">
+    <div id = "main">
+            <div id="items-container">
+                <div class ="items">
+                </div>
+            </div>
         </div>
-        <hr>
-        <div class="tasse">
-            <br>
-            <h1> Apporter une tasse réutilisable propre?</h1>
-            <h2 id="pick">non</h2>
-        </div>
+        <div class = "conteneur-panier">
+            <div id ="panier">
+                <h4>Panier</h4>
+                <hr>
+                <div id = "list-panier">
 
-        <div class="quantité">
-            <br>
-            <h1> Apporter une tasse réutilisable propre?</h1>
-            <button id="BtnPlus" class="material-icons"">
-            + </button>
-            <button id="BtnMoins" class="material-icons"">
-                -
-            </button>
+                </div>
+                <hr>
+            </div>
+            <div id = "caisse">
+                <p>Sous-total: <span class="soustotal">0</span></p>
+                <p>Taxes (13%): <span class="tax">0</span></p>
+                <p>Total: <span class="total">0</span></p>
+            </div>
+            <hr>
+            <button id = "vider">Vider le panier</button>
+            <button id = "terminer">Passer a la caisse</button>
         </div>
-        <br>
-        <div id="Ajouter">
-            <button id="BtnAjouter"">
-                Ajouter
-            </button>
-        </div>
-
     </div>
+
+</div>
+
+
+ 
+    
     <footer>
         <div class="first-footer"">
              <div class=" top-line">
