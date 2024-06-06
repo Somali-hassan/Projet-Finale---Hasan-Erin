@@ -10,3 +10,4 @@ const { data, error } = await supabase
     { username: 'Erin', Password: "12345"},
   ])
   .select()
+// Pas complet car je manque de temps
