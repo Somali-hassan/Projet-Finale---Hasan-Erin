@@ -56,7 +56,9 @@ function login(e){
 function Compte() {
   listStorage = JSON.parse(localStorage.getItem('listLogin'));
   let card = {mail : email.value,
-             nom : nom.value};
+             nom : nom.value,
+             panier : [],
+             bool : true};
   if (!listLogin.includes(card)){
     listLogin.push(card);
     // Store logins in Supabase

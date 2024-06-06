@@ -1,7 +1,11 @@
 let itemList = document.querySelector('.Produits')
 const btnCommande = document.getElementById("btnCommande")
 const btnConnecte = document.getElementById("btnConnecte")
-const btnPanier = document.getElementById("Panier")
+const btnPanier = document.getElementById("PC")
+const btnCompte = document.getElementById("btnCompte")
+let ident = document.getElementById("identité")
+let g1 = document.getElementById("header-gauche")
+let g2 = document.getElementById("header-gaucheC")
 let items = [
   {
       index: 0,
@@ -93,13 +97,23 @@ initItem();
 btnCommande.addEventListener("click", function change(){
     window.location.href = "menu.html";
 })
+// Authentification
 btnConnecte.addEventListener("click", function change(){
     window.location.href = "connexion.html";
 })
-let listL = JSON.parse(localStorage.getItem('listLogin'));
+btnCompte.addEventListener("click", function change(){
+    window.location.href = "connexion.html";
+})
 let Auth = JSON.parse(localStorage.getItem('Auth'));
-alert("Bienvenue sur le site de Tim Hortons " + Auth.nom);
-
-btnPanier.addEventListener('click', () =>{
+ident.innerHTML = Auth.nom;
+if (Auth.bool = true){
+  g1.style.display = "none";
+  g2.style.display = "block";
+}
+else{
+  g2.style.display = "none";
+  g1.style.display = "block";
+}
+btnPanier.addEventListener("click", function change(){
     window.location.href = "panier.html";
 })

@@ -40,7 +40,7 @@ header img{
   transition: 500ms ease-in-out;
   background-color: rgb(244, 179, 188, 0.9);
 }
-#Panier{
+.Panier, #btnCompte{
   background-color: rgb(202, 19, 43);
   color: white;
   border:none;
@@ -50,7 +50,7 @@ header img{
   padding-right: 0.5cm;
   margin-left:1cm;
 }
-#Panier:hover{
+.Panier:hover{
   transition: 500ms ease-in-out;
   background-color: rgba(0,0,0,0.5);
 }
