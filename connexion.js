@@ -11,7 +11,7 @@ let nom = document.getElementById("prénom");
 let email = document.getElementById("email");
 let listLogin = [];
 let Auth = [];
-// Switch displays
+// Switch displays inscription connexion
 btnSwitchI.addEventListener("click", () =>{
     displayC.style.display = "none";
     displayI.style.display = "block";
@@ -33,7 +33,7 @@ btndisplayDate.addEventListener("click", () =>{
     document.getElementById("Date-Input").style.display = "block";
     btndisplayDate.style.display = "none";
 })
-// Vérifier si user est valide
+// Vérifier si user est valide (Déja inscrite) 
 function login(e){
     e.preventDefault();
     listLogin = JSON.parse(localStorage.getItem('listLogin'));
@@ -52,7 +52,7 @@ function login(e){
     }
 
 }
-// Update Compte function to store logins in Supabase
+// Créer une compte avec LocalStorage
 function Compte() {
   listStorage = JSON.parse(localStorage.getItem('listLogin'));
   let card = {mail : email.value,
@@ -61,8 +61,6 @@ function Compte() {
              bool : true};
   if (!listLogin.includes(card)){
     listLogin.push(card);
-    // Store logins in Supabase
-    // storeLogins(listLogin);
     localStorage.setItem('listLogin', JSON.stringify(listLogin));
     alert("Compte créé avec succès.");
     localStorage.setItem('Auth', JSON.stringify(card));
@@ -72,27 +70,3 @@ function Compte() {
     alert("Compte déjà existant");
   }
 }
-// Install @supabase/supabase-js
-// import { createClient } from '@supabase/supabase-js';
-// // Connect to Supabase
-// const supabaseUrl = 'your-supabase-url';
-// const supabaseKey = 'your-supabase-key';
-// const supabase = createClient(supabaseUrl, supabaseKey);
-
-// // Store listLogin in Supabase
-// async function storeLogins(logins) {
-//   try {
-//     const { data, error } = await supabase
-//       .from('users')
-//       .insert(logins.map(login => ({ username: login })));
-//     if (error) {
-//       console.error('Error storing logins in Supabase:', error);
-//     } else {
-//       console.log('Logins stored in Supabase:', data);
-//     }
-//   } catch (error) {
-//     console.error('Error connecting to Supabase:', error);
-//   }
-// }
-
-
